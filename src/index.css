@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./css/fonts.css";
+@import "./css/frame.css";
 
 html {
     overflow-y: auto;
@@ -7,11 +9,32 @@ html {
 }
 
 body {
-    font-family: '', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #F0F0F0;
 }
 
-@font-face {
-    font-family: '';
-    src: url();
+.circle-pulse-1 {
+    width: 260px;
+    height: 260px;
+    border-radius: 300px;
+    border: 2px solid rgb(232, 0, 0);
+    animation: neon-1 ease-in-out 1s infinite alternate;
+}
+
+.circle-pulse-2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+    border: 2px solid rgb(232, 0, 0);
+    animation: pulse-1 ease-in-out 1s infinite alternate;
+}
+
+.btn-anima-1 {
+
+}
+
+.btn-anima-1:hover {
+    background-color: red;
+    box-shadow: 0 0 100px rgba(255, 0, 0, 1);
+    color: #F0F0F0;
 }
