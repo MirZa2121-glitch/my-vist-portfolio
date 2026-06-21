@@ -36,5 +36,6 @@ body {
 .btn-anima-1:hover {
     background-color: red;
     box-shadow: 0 0 100px rgba(255, 0, 0, 1);
+    border-radius: 100px;
     color: #F0F0F0;
 }

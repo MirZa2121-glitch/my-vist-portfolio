@@ -39,17 +39,17 @@ export const $port = [
     {
         id: 5,
         name: 'Marketing',
-        desc: 'Использовал стек React + TypeScript вместе с библиотеками GSAP (Скролл), Tailwind CSS. Залью на Хост после 9-го для демонстрации',
+        desc: 'Использовал стек React + TypeScript вместе с библиотеками GSAP (Скролл), Tailwind CSS (Ссылка не рабочая пока)',
         href: '#',
         IMG: $IMG.img5,
         
     },
     {
         id: 6,
-        name: '',
-        desc: '',
-        href: '',
-        IMG: '',
+        name: 'Analitics 🔥',
+        desc: 'Написан на стеке HTML. Использовал библиотеки Alpine.js, GSAP, Tailwind CSS. Есть Русская локализация через кнопку RU и Английская через EN. Так же окно с ботом (Не рабочий), некоторые иконки были созданы мною на Фигме. Есть незначительные баги которые ни как не влияют на производительность. По мере возможномти обновляю. Для чтения версий добавил файл README.MD ',
+        href: 'https://mirza2121-glitch.github.io/Analitics/',
+        IMG: $IMG.img6,
         
     },
     {

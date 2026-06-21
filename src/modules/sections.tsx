@@ -74,9 +74,9 @@ export const Intro = function() {
 
     return (
         <section className="intro__block flex items-center justify-center" id="intro">
-            <div className="w-full max-w-5xl mx-auto px-4 py-16 sm:py-20">
+            <div className="w-full max-w-5xl mx-auto px-4 py-15 sm:py-20">
                 <div className="flex flex-col items-center justify-center text-center gap-6">
-                    <div className="w-45 sm:w-55 md:w-75 pt-30 flex justify-center m-auto">
+                    <div className="w-45 sm:w-55 md:w-75 pt-20 flex justify-center m-auto">
                         <div className="circle-pulse-1 flex justify-center items-center m-[30px_0] sm:m-[50px_0]">
                             <div className="circle-pulse-2">
                                 <img src={$logo_1} alt="logo" className=" sm:block"/>
@@ -84,7 +84,7 @@ export const Intro = function() {
                         </div>
                     </div>
                     <h1 className="intro__text text-2xl sm:text-3xl md:text-[35px] text-[#1a1a1a] max-w-2xl">Junior Frontend Developer</h1>
-                    <p className="intro__desc text-[#1a1a1add] text-sm sm:text-base md:text-[16px] leading-7 max-w-xl">Hello! I'm Mirza and this is my web-site 'in top have navigation in fututre add's AI</p>
+                    <p className="intro__desc text-[#1a1a1add] text-sm sm:text-base md:text-[16px] leading-7 max-w-xl">Здравствуйте я Мирза а это моя визитка. На кнорках наверху 4 ориентира. 1. Интро, 2. Портфолио, 3. О, 4. Другие работы. ИИ Арес все еще не добавлен т.к. учу интеграцию.</p>
                     <a href="#portfolio" className="intro__btn flex items-center justify-center cursor-pointer w-32 sm:w-40 h-11 sm:h-13 m-[10px_0] rounded-[100px] hover:bg-transparent duration-150 border-2 border-[#2d2d2d] bg-[#2d2d2d] text-white hover:text-[#2d2d2d]">Next /</a>
                 </div>
                 <hr className='mt-8 text-[#1a1a1a]'/>
