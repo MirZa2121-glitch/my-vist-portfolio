@@ -1,50 +1,100 @@
-import $logoT from '../assets/img/logo/Ares.svg';
-import { $ICONS } from '../components/IMG';
+import { useState, useEffect } from "react";
+
+// Heaader block
 
 const Header = function() {
-    const $addEvent = () => {
-        alert('ИИ Ассистент Арес временно в разработке, и будет добавлен вероятно после следующей версий как освою интеграцию.')
-    }
+    const [isOpen, setIsOpen] = useState(false);
+
+    const nav = [
+        {id: 1, name: 'About me', href: '#about'},
+        {id: 2, name: 'Projects', href: '#portfolio'},
+        {id: 3, name: 'UX/UI', href: '#work'},
+        {id: 4, name: 'Stack', href: '#stack'},
+        {id: 5, name: 'Another work', href: '#another'},
+        {id: 6, name: 'Contact', href: '#contact'},
+    ]
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
 
     return(
-        <header className="backdrop-blur-2xl w-full top-0 right-0 fixed z-10 bg-[#f0f0f055]">
-            <div className="w-full m-auto p-[0_15px] lg:max-w-7xl">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-[28px_0] md:p-[30px_0]">
-                    <div className="w-full md:w-auto text-center md:text-left">
-                        <a href="#intro" className="text-[27px] md:text-[35px] hidden md:block lg:block font-bold">Mirza<abbr className="text-[#cd0000dd]">.</abbr></a>
+        <>
+            <header className="backdrop-blur-2xl w-full top-0 right-0 fixed z-10 bg-[#F8FAFC]">
+                <div className="w-full m-auto p-[0_15px] lg:max-w-7xl">
+                    <div className="py-10 flex items-center justify-between">
+                        <div>
+                            <a href="#intro" className="text-[28px] font-bold text-[#111827]">Mirza.<abbr className="text-[#6D5EF9]">dev</abbr></a>
+                        </div>
+                        
+                        <nav className="hidden lg:flex">
+                            <ul className="flex gap-10">
+                                {nav.map($nav => (
+                                    <li key={$nav.id}>
+                                        <a href={$nav.href} className="text-[#111827] hover:text-[#5B49F5] duration-100">{$nav.name}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+
+                        <a href="#contact" className="hidden lg:flex w-43 h-12 items-center justify-center rounded-[10px] hover:border-2 hover:bg-transparent hover:border-[#6D5EF9] hover:text-[#6D5EF9] duration-150 text-[#F8FAFC] bg-[#6D5EF9]">Contact with me</a>
+
+                        <button 
+                            onClick={toggleMenu}
+                            className="lg:hidden flex flex-col gap-1.5 p-2"
+                            aria-label="Toggle menu"
+                        >
+                            <span className={`w-6 h-0.5 bg-[#111827] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                            <span className={`w-6 h-0.5 bg-[#111827] transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+                            <span className={`w-6 h-0.5 bg-[#111827] transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                        </button>
                     </div>
-                    <nav className="w-full md:w-auto h-15 flex items-center justify-center">
-                        <ul className="flex flex-wrap items-center justify-center gap-10 px-2 py-1 text-sm md:text-base">
-                            <li>
-                                <a href="#intro" className="border-[#232323] duration-150 inline-flex items-center justify-center px-2 hover:scale-120">
-                                    <img src={$ICONS.main} alt="" className="w-10 block"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#portfolio" className="border-[#232323] duration-150 inline-flex items-center justify-center px-2 hover:scale-120">
-                                    <img src={$ICONS.portfolio} alt="" className="w-10 block"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#about" className="border-[#232323] duration-150 inline-flex items-center justify-center px-2 hover:scale-120">
-                                    <img src={$ICONS.about} alt="" className="w-8 block"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#work" className="border-[#232323] duration-150 inline-flex items-center justify-center px-2 hover:scale-120">
-                                    <img src={$ICONS.allWorks} alt="" className="w-10 block"/>
-                                </a>
-                            </li>
-                            <div className="flex justify-center md:justify-end">
-                                <a href="#" onClick={$addEvent} className="btn-anima-1 w-12 h-11 flex items-center duration-150">
-                                    <img src={$logoT} alt="" className='w-12 md:w-12'/>
+
+                    {isOpen && (
+                        <div className="lg:hidden fixed inset-0 top-24 bg-black/30 z-40" onClick={() => setIsOpen(false)}></div>
+                    )}
+
+                    <div className={`lg:hidden fixed top-24 left-0 right-0 bg-white/95 backdrop-blur-md transform transition-all duration-300 z-50 ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+                        <nav className="p-6">
+                            <ul className="flex flex-col gap-6">
+                                {nav.map($nav => (
+                                    <li key={$nav.id}>
+                                        <a 
+                                            href={$nav.href} 
+                                            className="text-[#111827] hover:text-[#5B49F5] duration-100 text-lg font-medium"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {$nav.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="mt-6 pt-6 border-t border-[#E5E7EB]">
+                                <a 
+                                    href="#contact" 
+                                    className="w-full flex items-center justify-center h-12 rounded-[10px] text-[#F8FAFC] bg-[#6D5EF9] hover:bg-[#5B49F5] duration-150 font-medium"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    Contact with me
                                 </a>
                             </div>
-                        </ul>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </>
     )
 }
 

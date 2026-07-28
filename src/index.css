@@ -10,32 +10,32 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F0F0F0;
+    background-color: #F8FAFC;
 }
 
-.circle-pulse-1 {
-    width: 260px;
-    height: 260px;
-    border-radius: 300px;
-    border: 2px solid rgb(232, 0, 0);
-    animation: neon-1 ease-in-out 1s infinite alternate;
+.circle-1 {
+    width: 350px;
+    height: 350px;
+    border-radius: 1000px;
+    animation: pulse-1 ease-in-out 3s alternate infinite;
 }
 
-.circle-pulse-2 {
-    width: 200px;
-    height: 200px;
-    border-radius: 300px;
-    border: 2px solid rgb(232, 0, 0);
-    animation: pulse-1 ease-in-out 1s infinite alternate;
+.hero-1 {
+    padding: 175px;
+    border-radius: 1000px;
+    background-image: url(./assets/img/logo/Logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: neon-1 ease-in-out 3s alternate infinite;
 }
 
-.btn-anima-1 {
-
-}
-
-.btn-anima-1:hover {
-    background-color: red;
-    box-shadow: 0 0 100px rgba(255, 0, 0, 1);
-    border-radius: 100px;
-    color: #F0F0F0;
+.hero-2 {
+    padding: 135px;
+    border-radius: 1000px;
+    background-image: url(./assets/img/logo/Ares.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: neon-1 ease-in-out 3s alternate infinite;
 }

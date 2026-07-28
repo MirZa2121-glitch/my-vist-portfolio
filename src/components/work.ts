@@ -7,49 +7,55 @@ export const $port = [
     {
         id: 1,
         name: 'Furnirture',
-        desc: 'Написал на Стеке React + TypeScript. Использовал библиотеки как: GSAP - для скролл анимаций и Tailwind CSS на замену CSS.',
+        desc: 'I built the project using a React + TypeScript stack. I utilized libraries such as GSAP for scroll animations and Tailwind CSS as a replacement for standard CSS.',
         href: 'https://furniture-app-six-pied.vercel.app/',
         IMG: $IMG.img1,
+        underText: 'Read more',
         
     },
     {
         id: 2,
         name: 'Infinite-shoo-app',
-        desc: 'Написал на Стеке React + TypeScript. Использовал библиотеки как: GSAP - для скролл анимаций и Tailwind CSS на замену CSS.',
+        desc: 'I built the project using a React + TypeScript stack. I utilized libraries such as GSAP for scroll animations and Tailwind CSS as a replacement for standard CSS.',
         href: 'https://infinity-shoo-of83vargc-mirza2121-glitchs-projects.vercel.app/',
         IMG: $IMG.img2,
+        underText: 'Read more',
         
     },
     {
         id: 3,
         name: 'Fintence',
-        desc: 'Написал на Стеке React + TypeScript. Использовал библиотеки как: GSAP - для скролл анимаций и Tailwind CSS на замену CSS.',
+        desc: 'I built the project using a React + TypeScript stack. I utilized libraries such as GSAP for scroll animations and Tailwind CSS as a replacement for standard CSS.',
         href: 'https://fentechh-app.vercel.app/',
         IMG: $IMG.img3,
+        underText: 'Read more',
         
     },
     {
         id: 4,
         name: 'Crygo',
-        desc: 'Написан на стеке HTML и CSS, особо библиотеки не использовал',
+        desc: 'Built using HTML and CSS; I didn"t really use any libraries.',
         href: 'https://mirza2121-glitch.github.io/crygo_landing_page/',
         IMG: $IMG.img4,
+        underText: 'Read more',
         
     },
     {
         id: 5,
         name: 'Marketing',
-        desc: 'Использовал стек React + TypeScript вместе с библиотеками GSAP (Скролл), Tailwind CSS (Ссылка не рабочая пока)',
+        desc: 'Used the React + TypeScript stack along with the GSAP (scrolling) and Tailwind CSS libraries (link not yet working).',
         href: '#',
         IMG: $IMG.img5,
+        underText: 'Read more',
         
     },
     {
         id: 6,
         name: 'Analitics 🔥',
-        desc: 'Написан на стеке HTML. Использовал библиотеки Alpine.js, GSAP, Tailwind CSS. Есть Русская локализация через кнопку RU и Английская через EN. Так же окно с ботом (Не рабочий), некоторые иконки были созданы мною на Фигме. Есть незначительные баги которые ни как не влияют на производительность. По мере возможномти обновляю. Для чтения версий добавил файл README.MD ',
+        desc: 'Built using an HTML-based stack, utilizing Alpine.js, GSAP, and Tailwind CSS libraries. It features language switching between Russian (RU) and English (EN). There is also a chatbot window (currently non-functional), and I designed some of the icons myself in Figma. There are minor bugs that do not affect performance. I provide updates whenever possible, and I have included a README.md file to track version history',
         href: 'https://mirza2121-glitch.github.io/Analitics/',
         IMG: $IMG.img6,
+        underText: 'Read more',
         
     },
     {
@@ -58,6 +64,7 @@ export const $port = [
         desc: '',
         href: '',
         IMG: '',
+        underText: 'Read more',
         
     },
 ]

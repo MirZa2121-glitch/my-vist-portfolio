@@ -18,3 +18,24 @@
         box-shadow: 0 0 50px rgb(255, 0, 0);
     }
 }
+
+.tech-card {
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(109, 94, 249, 0.18);
+}
+
+.tech-icon-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.tech-card:hover .tech-icon-wrapper {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(109, 94, 249, 0.16);
+    background-color: rgba(109, 94, 249, 0.06);
+}
