@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
+import Language from './language/selectLanguahe.tsx';
 
 // Heaader block
 
 const Header = function() {
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useTranslation();
 
     const nav = [
-        {id: 1, name: 'About me', href: '#about'},
-        {id: 2, name: 'Projects', href: '#portfolio'},
-        {id: 3, name: 'UX/UI', href: '#work'},
-        {id: 4, name: 'Stack', href: '#stack'},
-        {id: 5, name: 'Another work', href: '#another'},
-        {id: 6, name: 'Contact', href: '#contact'},
+        {id: 1, name: t('nav.about'), href: '#about'},
+        {id: 2, name: t('nav.projects'), href: '#portfolio'},
+        {id: 3, name: t('nav.uxui'), href: '#work'},
+        {id: 4, name: t('nav.stack'), href: '#stack'},
+        {id: 5, name: t('nav.another'), href: '#another'},
+        {id: 6, name: t('nav.contact'), href: '#contact'},
     ]
 
     const toggleMenu = () => {
@@ -49,12 +52,15 @@ const Header = function() {
                             </ul>
                         </nav>
 
-                        <a href="#contact" className="hidden lg:flex w-43 h-12 items-center justify-center rounded-[10px] hover:border-2 hover:bg-transparent hover:border-[#6D5EF9] hover:text-[#6D5EF9] duration-150 text-[#F8FAFC] bg-[#6D5EF9]">Contact with me</a>
+                        <div className="hidden lg:flex items-center gap-3">
+                            <Language />
+                            <a href="#contact" className="flex w-43 h-12 items-center justify-center rounded-[10px] hover:border-2 hover:bg-transparent hover:border-[#6D5EF9] hover:text-[#6D5EF9] duration-150 text-[#F8FAFC] bg-[#6D5EF9]">{t('header.contact')}</a>
+                        </div>
 
                         <button 
                             onClick={toggleMenu}
                             className="lg:hidden flex flex-col gap-1.5 p-2"
-                            aria-label="Toggle menu"
+                            aria-label={t('header.menu')}
                         >
                             <span className={`w-6 h-0.5 bg-[#111827] transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
                             <span className={`w-6 h-0.5 bg-[#111827] transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
@@ -82,12 +88,15 @@ const Header = function() {
                                 ))}
                             </ul>
                             <div className="mt-6 pt-6 border-t border-[#E5E7EB]">
+                                <div className="mb-3 flex justify-end">
+                                    <Language />
+                                </div>
                                 <a 
                                     href="#contact" 
                                     className="w-full flex items-center justify-center h-12 rounded-[10px] text-[#F8FAFC] bg-[#6D5EF9] hover:bg-[#5B49F5] duration-150 font-medium"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    Contact with me
+                                    {t('header.contact')}
                                 </a>
                             </div>
                         </nav>

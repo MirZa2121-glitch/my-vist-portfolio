@@ -73,7 +73,7 @@ export const $allPort = [
     {
         id: 1,
         name: 'Avrora',
-        desc: 'Первая тестовый макет на Фигма, тренировка по типографике и акцента цветов',
+        desc: 'First testing layout in Figma, Training for typhografy and accent colors',
         href: 'https://www.figma.com/design/FqFLeB376Ls1RCxi9oJnGX/Avrora?node-id=1-3&t=R2Te2pNKjw4oVJgi-1',
         IMG: $IMG2.img1,
     },
